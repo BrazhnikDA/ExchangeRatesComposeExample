@@ -1,3 +1,5 @@
+import java.net.URI
+
 pluginManagement {
     repositories {
         google {
@@ -6,6 +8,9 @@ pluginManagement {
                 includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
             }
+        }
+        maven {
+            url = uri("https://repo1.maven.org/maven2/")
         }
         mavenCentral()
         gradlePluginPortal()
