@@ -1,6 +1,11 @@
 [versions]
 agp = "8.5.0"
+composeCharts = "0.2.1"
+converterGson = "2.3.0"
+datastorePreferences = "1.1.1"
 kotlin = "1.9.0"
+kotlinxSerializationJson = "1.6.3"
+ksp = "1.9.0-1.0.12"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -10,13 +15,22 @@ activityCompose = "1.9.2"
 composeBom = "2024.04.01"
 coil = "2.2.2"
 lifecycle = "2.6.1"
-dagger = "2.45"
-hilt = "1.0.0"
+dagger = "2.48"
+hilt = "1.2.0"
+moshi = "1.15.0"
+moshiKotlin = "1.14.0"
+moshiKotlinCodegen = "1.15.0"
+mpandroidchart = "v3.1.0"
 retrofit = "2.9.0"
 okhttp = "5.0.0-alpha.3"
+ycharts = "2.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+compose-charts = { module = "io.github.bytebeats:compose-charts", version.ref = "composeCharts" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+converter-simplexml = { module = "com.squareup.retrofit2:converter-simplexml", version.ref = "converterGson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -37,9 +51,14 @@ dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", vers
 dagger-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger"}
 hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hilt"}
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt"}
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiKotlin" }
+moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiKotlinCodegen" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
 converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
 okhttp3 = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp"}
+ycharts = { module = "co.yml:ycharts", version.ref = "ycharts" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
