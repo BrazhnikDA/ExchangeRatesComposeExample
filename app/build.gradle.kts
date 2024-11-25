@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp") version "2.0.21-1.0.25"
-    id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp") version "1.9.0-1.0.12"
+    id("com.google.dagger.hilt.android")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -68,11 +69,19 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     ksp(libs.dagger.hilt.android.compiler)
     ksp(libs.hilt.compiler)
+    ksp(libs.moshi.kotlin.codegen)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
     implementation(libs.okhttp3)
-
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.converter.gson)
+    implementation(libs.converter.simplexml)
+    implementation(libs.compose.charts)
+    implementation(libs.ycharts)
 
     testImplementation(libs.junit)
 
