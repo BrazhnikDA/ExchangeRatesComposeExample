@@ -47,7 +47,7 @@ internal fun CoinDetailsScreen(item: String?) {
         viewModel.firstFetch(item!!)
     }
 
-    val options = listOf("Неделя", "Месяц", "Год")
+    val options = listOf("10 дней", "Месяц", "Год")
     val selectedOption = rememberSaveable { mutableIntStateOf(0) }
 
     when (val uiState = viewModel.uiState.collectAsState().value) {
@@ -132,8 +132,8 @@ private fun CoinDetailsScreenContent(
                     onClick = {
                         val today = LocalDate.now()
                         when (option) {
-                            "Неделя" -> {
-                                val result = today.minusWeeks(1)
+                            "10 дней" -> {
+                                val result = today.minusDays(10)
                                 val formattedDateToday =
                                     today.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
                                 val formattedDateResult =

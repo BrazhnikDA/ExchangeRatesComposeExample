@@ -26,7 +26,7 @@ internal class CoinDetailsViewModel @Inject constructor(
 
     internal fun firstFetch(currencyId: String) {
         val today = LocalDate.now()
-        val result = today.minusWeeks(1)
+        val result = today.minusDays(10)
         val formattedDateToday =
             today.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
         val formattedDateResult =
